@@ -62,20 +62,26 @@ export const StudentDashboard: React.FC = () => {
       : 'Are you sure you want to mark this assignment as submitted?';
 
   return (
-    <div className="p-6 min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#0E0E10] text-[#E5E7EB] p-6 transition-colors duration-300">
       {/* Header */}
-      <div className="flex justify-between mb-6">
-        <h1 className="text-xl font-bold">Welcome, {user?.name} 👋</h1>
+      <div className="flex justify-between items-center mb-8 border-b border-[#2A2A2E] pb-4">
+        <h1 className="text-2xl font-semibold tracking-tight text-[#E5E7EB]">
+          Welcome, {user?.name} 👋
+        </h1>
         <button
           onClick={handleLogout}
-          className="text-sm text-red-600 border px-3 py-1 rounded hover:bg-red-100"
+          className="text-sm text-[#EF4444] border border-[#EF4444]/40 px-3 py-1.5 rounded-md 
+                     hover:bg-[#EF4444]/10 transition-all duration-200"
         >
           Logout
         </button>
       </div>
 
       {/* Assignment List */}
-      <div className="mt-8">
+      <div className="mt-10">
+        <h2 className="text-lg font-medium mb-4 text-[#E5E7EB] tracking-tight">
+          Your Assignments
+        </h2>
         <AssignmentList
           assignments={assignments}
           onSubmit={handleMarkSubmitted}

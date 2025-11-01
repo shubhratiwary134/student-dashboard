@@ -13,17 +13,22 @@ export const ConfirmModal: React.FC<ConfirmModalProps> = ({
 }) => {
   if (!open) return null;
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-30">
-      <div className="bg-white p-6 rounded shadow-lg w-80 text-center">
-        <p className="mb-4 text-gray-800">{message}</p>
+    <div className="fixed inset-0 flex items-center justify-center bg-black/60 backdrop-blur-sm z-50">
+      <div className="bg-[#1A1A1D] border border-[#2A2A2E] rounded-xl p-6 w-80 text-center shadow-[0_0_20px_rgba(0,0,0,0.5)]">
+        <p className="mb-5 text-[#E5E7EB] text-sm">{message}</p>
         <div className="flex justify-around">
           <button
             onClick={onConfirm}
-            className="bg-green-600 text-white px-4 py-1 rounded"
+            className="px-5 py-1.5 bg-gradient-to-r from-[#2563EB] to-[#3B82F6] text-white rounded-md 
+                       font-medium hover:shadow-[0_0_10px_rgba(59,130,246,0.5)] transition-all duration-300"
           >
             Yes
           </button>
-          <button onClick={onCancel} className="bg-gray-300 px-4 py-1 rounded">
+          <button
+            onClick={onCancel}
+            className="px-5 py-1.5 bg-[#2A2A2E] text-[#9CA3AF] rounded-md font-medium 
+                       hover:bg-[#3A3A3D] transition-colors duration-200"
+          >
             No
           </button>
         </div>

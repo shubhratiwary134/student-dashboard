@@ -18,11 +18,13 @@ export const AssignmentList: React.FC<AssignmentListProps> = ({
   onSubmit,
 }) => {
   if (assignments.length === 0) {
-    return <p className="text-gray-600 text-center">No assignments found.</p>;
+    return (
+      <p className="text-[#9CA3AF] text-center mt-10">No assignments found.</p>
+    );
   }
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-5">
       {assignments.map((item, index) => (
         <AssignmentCard
           key={index}

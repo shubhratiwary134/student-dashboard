@@ -14,23 +14,34 @@ export const AssignmentCard: React.FC<AssignmentCardProps> = ({
   onSubmit,
 }) => {
   return (
-    <div className="p-4 bg-white shadow rounded flex justify-between items-center">
+    <div
+      className="p-5 bg-[#1A1A1D] rounded-xl border border-[#2A2A2E] 
+                 shadow-sm hover:shadow-[0_0_10px_rgba(59,130,246,0.2)] 
+                 transition-all duration-300 flex justify-between items-start"
+    >
       <div>
-        <h2 className="font-semibold">{assignment.title}</h2>
-        <p className="text-sm text-gray-600">{assignment.description}</p>
+        <h2 className="font-semibold text-[#E5E7EB] tracking-tight mb-1">
+          {assignment.title}
+        </h2>
+        <p className="text-sm text-[#9CA3AF]">{assignment.description}</p>
+
         {submitted ? (
-          <p className="text-green-600 text-sm mt-1">
+          <p className="text-[#10B981] text-sm mt-2">
             ✅ Submitted on {new Date(submittedAt || '').toLocaleDateString()}
           </p>
         ) : (
-          <p className="text-red-500 text-sm mt-1">Pending submission</p>
+          <p className="text-[#EF4444] text-sm mt-2">⏳ Pending submission</p>
         )}
       </div>
 
       {!submitted && (
         <button
           onClick={() => onSubmit(assignment.id)}
-          className="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700"
+          className="bg-gradient-to-r from-[#2563EB] to-[#3B82F6] 
+                     text-white px-4 py-1.5 rounded-md text-sm font-medium 
+                     hover:shadow-[0_0_10px_rgba(59,130,246,0.5)] 
+                     hover:scale-[1.03] active:scale-[0.98] 
+                     transition-all duration-300"
         >
           Mark as Submitted
         </button>
