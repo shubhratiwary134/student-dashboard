@@ -12,10 +12,11 @@ export function getAssignmentsForStudent(studentId: string) {
 
   return studentSubs.map((sub) => {
     const assignment = assignments.find((a) => a.id === sub.assignmentId);
+
     return {
-      assignment,
-      submitted: sub.submitted,
-      submittedAt: sub.submittedAt,
+      assignment: assignment!,
+      submitted: sub.submitted || false,
+      submittedAt: sub.submittedAt || 'whenever',
     };
   });
 }
