@@ -1,3 +1,4 @@
+import React from 'react';
 import { AdminCard } from './AdminCard';
 
 interface StudentSummary {
@@ -15,12 +16,14 @@ interface AdminListProps {
 export const AdminList: React.FC<AdminListProps> = ({ students }) => {
   if (students.length === 0) {
     return (
-      <p className="text-gray-600 text-center">No student data available.</p>
+      <p className="text-[#9CA3AF] text-center py-10">
+        No student data available.
+      </p>
     );
   }
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {students.map((student) => (
         <AdminCard key={student.id} student={student} />
       ))}
