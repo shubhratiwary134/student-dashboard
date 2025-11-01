@@ -58,6 +58,15 @@ export function initializeDummyData() {
 }
 
 export const getUsers = (): User[] => read<User[]>(USERS_KEY) || [];
+export const setUsers = (u: User[]) => write(USERS_KEY, u);
 export const setCurrentUser = (user: User) => write(CURRENT_USER_KEY, user);
 export const getCurrentUser = (): User | null => read<User>(CURRENT_USER_KEY);
 export const clearCurrentUser = () => localStorage.removeItem(CURRENT_USER_KEY);
+
+export const getAssignments = (): Assignment[] =>
+  read<Assignment[]>(ASSIGNMENTS_KEY) || [];
+export const setAssignments = (a: Assignment[]) => write(ASSIGNMENTS_KEY, a);
+
+export const getSubmissions = (): Submission[] =>
+  read<Submission[]>(SUBMISSIONS_KEY) || [];
+export const setSubmissions = (s: Submission[]) => write(SUBMISSIONS_KEY, s);
