@@ -62,16 +62,31 @@ export const StudentDashboard: React.FC = () => {
       : 'Are you sure you want to mark this assignment as submitted?';
 
   return (
-    <div className="min-h-screen bg-[#0E0E10] text-[#E5E7EB] p-6 transition-colors duration-300">
+    <div className="min-h-screen bg-[#171717] text-[#E5E7EB] p-6 transition-colors duration-300">
       {/* Header */}
       <div className="flex justify-between items-center mb-8 border-b border-[#2A2A2E] pb-4">
-        <h1 className="text-2xl font-semibold tracking-tight text-[#E5E7EB]">
-          Welcome, {user?.name} 👋
-        </h1>
+        <div>
+          <h1 className="text-4xl font-semibold tracking-tight text-[#E5E7EB]">
+            Welcome back, {user?.name} 👋
+          </h1>
+          <p className="px-1">
+            Track your assignments and manage your submissions
+          </p>
+        </div>
         <button
           onClick={handleLogout}
-          className="text-sm text-[#EF4444] border border-[#EF4444]/40 px-3 py-1.5 rounded-md 
-                     hover:bg-[#EF4444]/10 transition-all duration-200"
+          className="
+    px-4 py-2 
+    rounded-md 
+    text-sm font-medium
+    border border-[#EF4444]/40 
+    text-[#EF4444]
+    bg-transparent
+    hover:bg-[#EF4444]/10
+    hover:shadow-[0_0_8px_rgba(239,68,68,0.3)]
+    active:scale-[0.97]
+    transition-all duration-300
+  "
         >
           Logout
         </button>
@@ -79,8 +94,8 @@ export const StudentDashboard: React.FC = () => {
 
       {/* Assignment List */}
       <div className="mt-10">
-        <h2 className="text-lg font-medium mb-4 text-[#E5E7EB] tracking-tight">
-          Your Assignments
+        <h2 className="text-2xl font-medium mb-4 text-[#E5E7EB] tracking-tight">
+          📜 My Assignments
         </h2>
         <AssignmentList
           assignments={assignments}
