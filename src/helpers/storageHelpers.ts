@@ -1,4 +1,7 @@
 import type { Assignment, Submission, User } from '../types/types';
+import { usersData } from '../data/usersData';
+import { assignmentsData } from '../data/assignmentsData';
+import { submissionsData } from '../data/submissionsData';
 
 const USERS_KEY = 'users';
 const ASSIGNMENTS_KEY = 'assignments';
@@ -17,43 +20,9 @@ function write<T>(key: string, val: T) {
 export function initializeDummyData() {
   const users = read<User[]>(USERS_KEY);
   if (!users || users.length === 0) {
-    const dummyUsers: User[] = [
-      {
-        id: 'u1',
-        name: 'Aisha Sharma',
-        role: 'student',
-        email: 'aisha@example.com',
-      },
-      {
-        id: 'u2',
-        name: 'Rohan Mehta',
-        role: 'student',
-        email: 'rohan@example.com',
-      },
-      { id: 'u3', name: 'Prof. Roy', role: 'admin', email: 'roy@uni.edu' },
-    ];
-    write(USERS_KEY, dummyUsers);
-
-    const assignments: Assignment[] = [
-      {
-        id: 'a1',
-        title: 'Math Homework 1',
-        description: 'Solve Chapter 2 problems',
-        createdBy: 'u3',
-        createdAt: new Date().toISOString(),
-      },
-    ];
-    write(ASSIGNMENTS_KEY, assignments);
-
-    const submissions: Submission[] = dummyUsers
-      .filter((u) => u.role === 'student')
-      .map((s) => ({
-        assignmentId: 'a1',
-        studentId: s.id,
-        submitted: false,
-      }));
-
-    write(SUBMISSIONS_KEY, submissions);
+    write(USERS_KEY, usersData);
+    write(ASSIGNMENTS_KEY, assignmentsData);
+    write(SUBMISSIONS_KEY, submissionsData);
   }
 }
 
