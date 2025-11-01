@@ -14,7 +14,6 @@ function write<T>(key: string, val: T) {
   localStorage.setItem(key, JSON.stringify(val));
 }
 
-// ✅ Initialize dummy data on first run
 export function initializeDummyData() {
   const users = read<User[]>(USERS_KEY);
   if (!users || users.length === 0) {

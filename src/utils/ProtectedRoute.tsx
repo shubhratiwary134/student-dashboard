@@ -1,4 +1,5 @@
 import { Navigate } from 'react-router-dom';
+import { getCurrentUser } from '../helpers/storageHelpers';
 
 interface ProtectedRouteProps {
   role: 'student' | 'admin';
@@ -6,8 +7,8 @@ interface ProtectedRouteProps {
 }
 
 const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ role, children }) => {
-  const storedRole = localStorage.getItem('role');
-  if (storedRole !== role) {
+  const user = getCurrentUser();
+  if (!user || user.role !== role) {
     return <Navigate to="/" replace />;
   }
   return <>{children}</>;
