@@ -1,8 +1,7 @@
 
 
----
 
-```md
+
 # 🎓 Student Dashboard — JoinEasy Internship Task-1
 
 A fully functional **role-based Document & Assignment Management System** built with **React + TypeScript + TailwindCSS**, designed under a **12-hour build constraint**.  
