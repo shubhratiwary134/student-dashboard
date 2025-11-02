@@ -23,7 +23,7 @@ export const AdminList: React.FC<AdminListProps> = ({ students }) => {
   }
 
   return (
-    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
       {students.map((student) => (
         <AdminCard key={student.id} student={student} />
       ))}

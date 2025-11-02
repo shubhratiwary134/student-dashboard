@@ -10,13 +10,13 @@ export const ManageAssignments: React.FC = () => {
         All Assignments
       </h2>
 
-      <div className="space-y-3">
+      <div className="space-y-3 grid grid-cols-1 md:grid-cols-2 gap-4">
         {assignments.map((assignment) => (
           <div
             key={assignment.id}
-            className="p-4 bg-[#1A1A1D] border border-[#2A2A2E] rounded-lg hover:bg-[#222225] transition-colors duration-200"
+            className="p-5 bg-[#1A1A1D] border border-[#2A2A2E] rounded-lg hover:bg-[#222225] transition-colors duration-200"
           >
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center ">
               <h3 className="font-medium text-[#F3F4F6]">{assignment.title}</h3>
               <span className="text-xs text-[#9CA3AF]">
                 {new Date(assignment.createdAt).toLocaleDateString()}
