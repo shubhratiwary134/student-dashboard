@@ -2,7 +2,7 @@
 
 
 
-# 🎓 Student Dashboard — JoinEasy Internship Task-1
+# 🎓 Student Dashboard 
 
 A fully functional **role-based Document & Assignment Management System** built with **React + TypeScript + TailwindCSS**, designed under a **12-hour build constraint**.  
 This project demonstrates a clean modular architecture, persistent storage, and a sleek dark UI inspired by professional tools like **Figma** and **Linear**.
@@ -97,7 +97,7 @@ src/
 
    ```bash
    npm install
-   ``
+   ```
 
 3. **Run the development server**
 
@@ -190,6 +190,3 @@ For queries or collaboration:
 
 ---
 
-```
-
-```
