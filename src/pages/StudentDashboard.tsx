@@ -8,6 +8,7 @@ import {
 import { AssignmentList } from '../components/student/AssignmentList';
 import { ConfirmModal } from '../components/student/ConfirmModal';
 import type { Assignment } from '../types/types';
+import { Tabs } from '../components/student/Tabs';
 
 interface StudentAssignmentData {
   assignment: Assignment;
@@ -91,6 +92,22 @@ export const StudentDashboard: React.FC = () => {
           Logout
         </button>
       </div>
+
+      {/* Summary Tabs */}
+      <Tabs
+        total={assignments.length}
+        completed={assignments.filter((a) => a.submitted).length}
+        pending={assignments.filter((a) => !a.submitted).length}
+        progress={
+          assignments.length
+            ? Math.round(
+                (assignments.filter((a) => a.submitted).length /
+                  assignments.length) *
+                  100
+              )
+            : 0
+        }
+      />
 
       {/* Assignment List */}
       <div className="mt-10">

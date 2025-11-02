@@ -14,6 +14,9 @@ export interface Assignment {
   driveLink?: string;
   createdBy: string; // adminId
   createdAt: string;
+  dueInDays: number;
+  marks: number;
+  category: string;
 }
 
 export interface Submission {

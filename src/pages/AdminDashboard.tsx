@@ -51,7 +51,7 @@ export const AdminDashboard: React.FC = () => {
       {/* Header */}
       <div className="flex justify-between items-center mb-8 border-b border-[#2A2A2E] pb-4">
         <h1 className="text-2xl font-semibold tracking-tight text-[#E5E7EB]">
-          Admin Dashboard
+          🤵 Admin Dashboard
         </h1>
         <button
           onClick={handleLogout}
