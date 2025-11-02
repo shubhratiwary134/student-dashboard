@@ -50,9 +50,12 @@ export const AdminDashboard: React.FC = () => {
     <div className="min-h-screen bg-[#0E0E10] text-[#E5E7EB] p-6 transition-colors duration-300">
       {/* Header */}
       <div className="flex justify-between items-center mb-8 border-b border-[#2A2A2E] pb-4">
-        <h1 className="text-2xl font-semibold tracking-tight text-[#E5E7EB]">
-          🤵 Admin Dashboard
-        </h1>
+        <div>
+          <h1 className="text-2xl font-semibold tracking-tight text-[#E5E7EB]">
+            🤵 Admin Dashboard
+          </h1>
+          <p>Manage assignments and track student progress</p>
+        </div>
         <button
           onClick={handleLogout}
           className="text-sm text-[#EF4444] border border-[#EF4444]/40 px-3 py-1.5 rounded-md 
@@ -64,24 +67,32 @@ export const AdminDashboard: React.FC = () => {
       <div className="flex gap-3 mb-8">
         <button
           onClick={() => setSelectedSection('progress')}
-          className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
-            selectedSection === 'progress'
-              ? 'bg-[#2563EB] text-white shadow-[0_0_10px_rgba(59,130,246,0.5)]'
-              : 'bg-[#b0b0b9] text-[#9CA3AF] hover:bg-[#2A2A2E]'
-          }`}
+          className={`
+      flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium
+      transition-all duration-200
+      ${
+        selectedSection === 'progress'
+          ? 'bg-[#2A2A2E] border border-[#3B82F6]/50 text-[#F3F4F6] shadow-[0_0_8px_rgba(59,130,246,0.4)]'
+          : 'bg-[#1A1A1D] text-[#9CA3AF] hover:bg-[#2A2A2E]/60'
+      }
+    `}
         >
-          Student Progress
+          📊 Student Progress
         </button>
 
         <button
           onClick={() => setSelectedSection('assignments')}
-          className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
-            selectedSection === 'assignments'
-              ? 'bg-[#2563EB] text-white shadow-[0_0_10px_rgba(59,130,246,0.5)]'
-              : 'bg-[#1A1A1D] text-[#9CA3AF] hover:bg-[#2A2A2E]'
-          }`}
+          className={`
+      flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium
+      transition-all duration-200
+      ${
+        selectedSection === 'assignments'
+          ? 'bg-[#2A2A2E] border border-[#3B82F6]/50 text-[#F3F4F6] shadow-[0_0_8px_rgba(59,130,246,0.4)]'
+          : 'bg-[#1A1A1D] text-[#9CA3AF] hover:bg-[#2A2A2E]/60'
+      }
+    `}
         >
-          Manage Assignments
+          🗂 Manage Assignments
         </button>
       </div>
 

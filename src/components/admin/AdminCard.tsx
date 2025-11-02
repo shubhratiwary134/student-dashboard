@@ -21,7 +21,7 @@ export const AdminCard: React.FC<AdminCardProps> = ({ student }) => {
       className="
         bg-[#1A1A1D] border border-[#2A2A2E] rounded-xl 
         hover:border-[#3B82F6]/40 hover:shadow-[0_0_12px_rgba(59,130,246,0.15)]
-        transition-all duration-300 p-7
+        transition-all duration-300 p-7 flex flex-col gap-2
       "
     >
       <div className="flex justify-between items-center mb-2">
