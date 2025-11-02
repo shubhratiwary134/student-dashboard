@@ -5,6 +5,7 @@ import { getStudentProgress } from '../helpers/studentHelpers';
 import { AddAssignmentButton } from '../components/admin/AddAssignmentButton';
 import { AdminList } from '../components/admin/AdminList';
 import { ManageAssignments } from '../components/admin/ManageAssignments';
+import { LogOut } from 'lucide-react';
 
 interface StudentSummary {
   id: string;
@@ -61,7 +62,7 @@ export const AdminDashboard: React.FC = () => {
           className="text-sm text-[#EF4444] border border-[#EF4444]/40 px-3 py-1.5 rounded-md 
                      hover:bg-[#EF4444]/10 transition-colors duration-200"
         >
-          Logout
+          <LogOut />
         </button>
       </div>
       <div className="flex gap-3 mb-8">

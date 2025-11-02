@@ -9,6 +9,7 @@ import { AssignmentList } from '../components/student/AssignmentList';
 import { ConfirmModal } from '../components/student/ConfirmModal';
 import type { Assignment } from '../types/types';
 import { Tabs } from '../components/student/Tabs';
+import { LogOut } from 'lucide-react';
 
 interface StudentAssignmentData {
   assignment: Assignment;
@@ -89,7 +90,7 @@ export const StudentDashboard: React.FC = () => {
     transition-all duration-300
   "
         >
-          Logout
+          <LogOut />
         </button>
       </div>
 
