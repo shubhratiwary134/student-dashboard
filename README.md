@@ -91,19 +91,19 @@ src/
    ```bash
    git clone https://github.com/shubhratiwary134/documentWeb.git
    cd documentWeb
-```
+``
 
 2. **Install dependencies**
 
    ```bash
    npm install
-   ```
+   ``
 
 3. **Run the development server**
 
    ```bash
    npm run dev
-   ```
+   ``
 
 4. **Open in browser**
 
