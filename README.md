@@ -185,7 +185,7 @@ All rights reserved © 2025 Shubhra Tiwary.
 
 For queries or collaboration:
 **Shubhra Tiwary**
-📧 [shubhratiwary134@gmail.com](mailto:shubhratiwary5@gmail.com)
+📧 [shubhratiwary5@gmail.com](mailto:shubhratiwary5@gmail.com)
 🌐 [GitHub — shubhratiwary134](https://github.com/shubhratiwary134)
 
 ---
