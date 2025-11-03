@@ -89,8 +89,8 @@ src/
 
 1. **Clone this repository**
    ```bash
-   git clone https://github.com/shubhratiwary134/documentWeb.git
-   cd documentWeb
+   git clone https://github.com/shubhratiwary134/student-dashboard.git
+   cd student-dashboard
 ``
 
 2. **Install dependencies**
