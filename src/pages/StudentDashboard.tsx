@@ -79,7 +79,7 @@ export const StudentDashboard: React.FC = () => {
           onClick={handleLogout}
           className="text-sm text-[#EF4444] border border-[#EF4444]/40 px-4 py-2 rounded-md 
                      hover:bg-[#EF4444]/10 hover:shadow-[0_0_8px_rgba(239,68,68,0.3)] 
-                     active:scale-[0.97] transition-all duration-300 self-start sm:self-auto"
+                     hover:cursor-pointer active:scale-[0.97] transition-all duration-300 self-start sm:self-auto"
         >
           <LogOut />
         </button>
