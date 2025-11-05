@@ -2,34 +2,34 @@
 
 
 
-# 🎓 Student Dashboard 
+#  Student Dashboard 
 
 A fully functional **role-based Document & Assignment Management System** built with **React + TypeScript + TailwindCSS**, designed under a **12-hour build constraint**.  
 This project demonstrates a clean modular architecture, persistent storage, and a sleek dark UI inspired by professional tools like **Figma** and **Linear**.
 
 ---
 
-## 🚀 Features
+##  Features
 
-### 🔐 Role-Based Authentication
+###  Role-Based Authentication
 - Login as either **Student** or **Admin** using a dropdown selector.  
 - Auth data is persisted in **localStorage** — no backend required.  
 - Auto-redirect based on role after login.
 
-### 👨‍🎓 Student Dashboard
+###  Student Dashboard
 - View all assignments dynamically from localStorage.  
 - Submit assignments with confirmation modals.  
 - Progress summary tabs: Total, Completed, Pending, and Progress %.  
 - Modern dark-themed UI with responsive grid layout.  
 - Submission status and category badges for each assignment.
 
-### 🧑‍💼 Admin Dashboard
+###  Admin Dashboard
 - Toggle between **Student Progress** and **Manage Assignments** views.  
 - View per-student completion stats with progress bars and pending counts.  
 - Create new assignments via modal (instantly updates localStorage).  
 - Responsive grid displaying all students and progress percentages.  
 
-### 🎨 UI / UX Highlights
+###  UI / UX Highlights
 - Sleek **dark-matte color palette** (deep grays, blue-violet accents).  
 - Modular reusable components for each section (Cards, Lists, Modals).  
 - Smooth hover effects, consistent spacing, and typography balance.  
@@ -37,7 +37,7 @@ This project demonstrates a clean modular architecture, persistent storage, and 
 
 ---
 
-## 🏗️ Tech Stack
+##  Tech Stack
 
 | Category | Technology |
 |-----------|-------------|
@@ -50,7 +50,7 @@ This project demonstrates a clean modular architecture, persistent storage, and 
 
 ---
 
-## 🧩 Project Structure
+##  Project Structure
 
 ```
 
@@ -89,8 +89,8 @@ src/
 
 1. **Clone this repository**
    ```bash
-   git clone https://github.com/shubhratiwary134/documentWeb.git
-   cd documentWeb
+   git clone https://github.com/shubhratiwary134/student-dashboard.git
+   cd student-dashboard
 ``
 
 2. **Install dependencies**
@@ -121,7 +121,7 @@ To reset or refresh new fields, clear your browser’s localStorage.
 
 ---
 
-## 🧠 Key Architectural Concepts
+##  Key Architectural Concepts
 
 * **Phase 1:** Project setup + Role-based login
 * **Phase 2:** Dummy data + localStorage integration
@@ -132,7 +132,7 @@ Each phase was designed modularly — ensuring that components remain reusable a
 
 ---
 
-## 🪄 Design System
+##  Design System
 
 | Element            | Description           |
 | ------------------ | --------------------- |
@@ -148,7 +148,7 @@ Consistent padding, rounded corners (`rounded-xl`), and subtle glow shadows (`sh
 
 ---
 
-## 🧰 Available Scripts
+##  Available Scripts
 
 | Command           | Action                   |
 | ----------------- | ------------------------ |
@@ -158,7 +158,7 @@ Consistent padding, rounded corners (`rounded-xl`), and subtle glow shadows (`sh
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
 ### 🔹 Student Dashboard
 
@@ -181,11 +181,11 @@ All rights reserved © 2025 Shubhra Tiwary.
 
 ---
 
-## 💬 Contact
+##  Contact
 
 For queries or collaboration:
 **Shubhra Tiwary**
-📧 [shubhratiwary134@gmail.com](mailto:shubhratiwary134@gmail.com)
+📧 [shubhratiwary5@gmail.com](mailto:shubhratiwary5@gmail.com)
 🌐 [GitHub — shubhratiwary134](https://github.com/shubhratiwary134)
 
 ---
