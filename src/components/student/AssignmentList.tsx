@@ -1,4 +1,3 @@
-import React from 'react';
 import type { Assignment } from '../../types/types';
 import { AssignmentCard } from './AssignmentCard';
 
@@ -19,12 +18,20 @@ export const AssignmentList: React.FC<AssignmentListProps> = ({
 }) => {
   if (assignments.length === 0) {
     return (
-      <p className="text-[#9CA3AF] text-center mt-10">No assignments found.</p>
+      <p className="text-[#9CA3AF] text-center mt-10 text-sm sm:text-base">
+        No assignments found.
+      </p>
     );
   }
 
   return (
-    <div className="grid grid-cols-3 gap-5 space-y-5 ">
+    <div
+      className="
+        grid gap-5
+        grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 
+       transition-all duration-300
+      "
+    >
       {assignments.map((item, index) => (
         <AssignmentCard
           key={index}
